@@ -88,6 +88,6 @@ ROBOTSTXT_OBEY = False
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 USER_AGENT = 'Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0'
-# ITEM_PIPELINES={
-#     'momoyu.pipelines.MysqlPipeline':300
-# }
+ITEM_PIPELINES={
+    'momoyu.pipelines.MysqlPipeline':300
+}
