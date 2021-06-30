@@ -3,6 +3,5 @@
 cd momoyu
 echo $PWD
 scrapy crawl douban
-scrapy crawl zhihu 
 scrapy crawl weibo 
 scrapy crawl oschina

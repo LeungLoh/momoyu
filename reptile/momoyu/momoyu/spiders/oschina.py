@@ -1,7 +1,7 @@
 import scrapy
 from scrapy.selector import Selector
 from momoyu.items import WbsiteItem
-
+import re
 class OschinaSpider(scrapy.Spider):
     name = 'oschina'
     allowed_domains = ['oschina.net']
@@ -17,7 +17,10 @@ class OschinaSpider(scrapy.Spider):
             subtitle = article.xpath('div/text()').extract_first(default='')
             item['title'] = title
             item['url'] = url
-            item['subtitle'] = subtitle
+            try:
+                item['subtitle'] = (re.findall("\d{1,}\d",subtitle)[0])
+            except:
+                item['subtitle']=""
             item['website']="oschina"
             yield item
 

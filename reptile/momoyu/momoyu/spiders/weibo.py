@@ -18,7 +18,10 @@ class WeiboSpider(scrapy.Spider):
             subtitle = article.xpath('td[2]/span/text()').extract_first(default='')
             item['title'] = title
             item['url'] = "https://s.weibo.com"+url
-            item['subtitle'] = subtitle
+            try:
+                item['subtitle'] =str(subtitle)
+            except:
+                item['subtitle'] =""
             item['website']=["weibo"]
             yield item
 
