@@ -130,15 +130,15 @@ export default {
   word-break: break-all;
 }
 .hot-content li a span:first-of-type {
-  width: 40px;
+  width: 8%;
 }
 
 .hot-content li a span:nth-of-type(2) {
-  width: 400px;
+  width: 70%;
 }
 
 .hot-content li a span:nth-of-type(3) {
-  width: 100px;
+  width: 22%;
 }
 
 .hot-content a {
